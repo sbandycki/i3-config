@@ -157,6 +157,7 @@ bar {
         status_command i3status
 }
 
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -168,17 +169,18 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 bindsym XF86Calculator exec kcalc
 
-# exec --no-startup-id setxkbmap ie,pl -option 'grp:alt_shift_toggle'
+exec --no-startup-id setxkbmap us,pl -option 'grp:alt_shift_toggle'
 
 
-exec sh ~/.fehbg
-
+# exec sh ~/.fehbg
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
 # list open windows to switch to
 bindsym $mod+Tab exec rofi -show window
 
-# exec xrandr --output eDP1 --auto --output DP2-1 --auto --scale 2x2
+exec sh ~/.screenlayout/screen.sh 
 
-exec sh ~/.screenlayout/screen.sh
+# exec --no-startup-id ~/.fehbg
+
+exec --no-startup-id nitrogen --restore
