@@ -5,6 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -155,8 +157,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
 
+# i3-gaps
+# gaps inner 10
+# gaps outer 0
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -169,10 +175,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 bindsym XF86Calculator exec kcalc
 
-exec --no-startup-id setxkbmap us,pl -option 'grp:alt_shift_toggle'
+exec --no-startup-id setxkbmap -layout ie,pl -option "grp:alt_shift_toggle"
 
-
-# exec sh ~/.fehbg
+bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
