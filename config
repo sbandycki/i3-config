@@ -175,14 +175,18 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 bindsym XF86Calculator exec kcalc
 
+bindsym XF86HomePage exec chromium
+
 exec --no-startup-id setxkbmap -layout ie,pl -option "grp:alt_shift_toggle"
 
-bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
+# bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
 # list open windows to switch to
 bindsym $mod+Tab exec rofi -show window
+
+bindsym XF86MyComputer exec terminology -e ranger
 
 exec sh ~/.screenlayout/screen.sh 
 
