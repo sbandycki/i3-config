@@ -193,3 +193,6 @@ exec sh ~/.screenlayout/screen.sh
 # exec --no-startup-id ~/.fehbg
 
 exec --no-startup-id nitrogen --restore
+
+# UDisks front-end for managing removable media.
+exec --no-startup-id udiskie -ans &
