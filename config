@@ -179,7 +179,7 @@ bindsym XF86HomePage exec chromium
 
 exec --no-startup-id setxkbmap -layout ie,pl -option "grp:alt_shift_toggle"
 
-# bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
+bindsym $mod+Shift+x exec i3lock-fancy
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
