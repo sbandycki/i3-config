@@ -5,6 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+exec_always ~/.screenlayout/screens.sh &
+# UDisks front-end for managing removable media.
+exec --no-startup-id udiskie -ans &
 
 
 # i3 config file (v4)
@@ -179,6 +182,7 @@ bindsym XF86HomePage exec chromium
 
 exec --no-startup-id setxkbmap -layout ie,pl -option "grp:alt_shift_toggle"
 
+
 bindsym $mod+Shift+x exec i3lock-fancy
 
 exec --no-startup-id compton --config ~/.config/compton.conf -b
@@ -188,11 +192,7 @@ bindsym $mod+Tab exec rofi -show window
 
 bindsym XF86MyComputer exec terminology -e ranger
 
-exec sh ~/.screenlayout/screen.sh 
 
 # exec --no-startup-id ~/.fehbg
 
 exec --no-startup-id nitrogen --restore
-
-# UDisks front-end for managing removable media.
-exec --no-startup-id udiskie -ans &
